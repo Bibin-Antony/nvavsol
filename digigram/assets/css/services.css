@@ -169,3 +169,54 @@
 .page-banner{
   background-image: url(/digigram/assets/img/Service/bg-img.jpg);
 }
+
+/* Default layout for larger screens */
+.services-bg-blue,
+.services-bg-white {
+    display: flex;
+    flex-direction: row; /* Default: Images and text side by side */
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+/* Medium and small screens (stacked layout) */
+@media (max-width: 1024px) {
+    .services-bg-blue,
+    .services-bg-white {
+        flex-direction: column; /* Stack vertically */
+        height: auto; /* Allow sections to adjust height */
+    }
+
+    .bg-blue-img,
+    .bg-white-img {
+        order: 1; /* Ensure images appear first */
+        width: 100%; /* Full width for images */
+        margin-bottom: 10px; /* Space between image and text */
+    }
+
+    .bg-blue-content-section,
+    .bg-white-content-section {
+        order: 2; /* Ensure text appears after images */
+        width: 100%; /* Full width for text */
+        padding: 10px; /* Add padding for readability */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .bg-blue-img img,
+    .bg-white-img img {
+        width: 90%; /* Adjust image size */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center-align image */
+    }
+
+    .bg-blue-content-section h1,
+    .bg-white-content-section h1 {
+        font-size: 20px; /* Adjust heading size for smaller screens */
+    }
+
+    .bg-blue-content-section ul li,
+    .bg-white-content-section ul li {
+        font-size: 14px; /* Smaller text for smaller screens */
+    }
+}
