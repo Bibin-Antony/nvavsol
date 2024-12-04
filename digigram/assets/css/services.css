@@ -1,45 +1,171 @@
-.service {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-  }
-.hero {
+/* If BG color is blue */
+.services-bg-blue {
     background: linear-gradient(135deg, #004d99, #00bfff);
-    padding: 100px 20px;
-    text-align: center;
-    color: white;
-    animation: fadeIn 2s;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  .services {
+    color: black;
+    height: 80vh;
+    width: 100%; 
+    align-items: center;
+    display: flex; 
+    margin: 5px auto; 
+}
+
+.bg-blue-img {
+    width: 50%;
+    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-    padding: 20px;
-  }
-  .service-card {
-    background: white;
+    align-items: center;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s ease-out forwards; /* Slide-in effect */
+}
+
+.bg-blue-img img {
+    width: 90%;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+}
+
+.bg-blue-content-section {
+    width: 50%;
     padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fadeIn 1.5s ease-out 0.5s forwards;
+}
+
+.bg-blue-content-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.bg-blue-content-section ul {
+    list-style: none;
+}
+
+.bg-blue-content-section ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.bg-blue-content-section ul li::before {
+    content: "•";
+    color: white;
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Background color white */
+.services-bg-white {
+  background: #FFFFFF; /* White background */
+  color: #000000; /* Default text color as black */
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  margin: 5px auto;
+}
+
+.bg-white-content-section{
+  width: 50%;
+  padding: 20px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: textSlideIn 1.5s ease-out forwards; /* Text slides in from left */
+}
+
+.bg-white-content-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #007bff; /* Blue color for heading */
+}
+
+.bg-white-content-section ul {
+  list-style: none;
+}
+
+.bg-white-content-section ul li {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+  color: black; /* black color for list items */
+}
+
+.bg-white-content-section ul li::before {
+  content: "•";
+  color: #007bff; /* blue bullet for contrast */
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+}
+
+.bg-white-img {
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  animation: imageSlideIn 1.5s ease-out forwards; /* Image slides in from right */
+}
+
+.bg-white-img img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Animation Keyframes */
+@keyframes textSlideIn {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
   }
-  .service-card:hover {
-    transform: scale(1.05);
+  100% {
+      transform: translateX(0);
+      opacity: 1;
   }
-  .icon {
-    font-size: 50px;
-    color: #004d99;
-    margin-bottom: 10px;
+}
+
+@keyframes imageSlideIn {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
   }
-  h2 {
-    margin-top: 10px;
+  100% {
+      transform: translateX(0);
+      opacity: 1;
   }
+  /* Define a reusable animation */
+
+
+}
+.page-banner{
+  background-image: url(/digigram/assets/img/Service/bg-img.jpg);
+}
