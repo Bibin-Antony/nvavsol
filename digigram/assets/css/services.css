@@ -1,3 +1,27 @@
+.service {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    background-image: url('../img/Service/bg.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.content {
+    background: rgba(39, 40, 46, 0.6); /* Semi-transparent background for text */
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
 /* If BG color is blue */
 .services-bg-blue {
     background: linear-gradient(135deg, #004d99, #00bfff);
