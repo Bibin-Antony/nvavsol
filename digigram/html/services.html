@@ -8,7 +8,11 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com">
 
-  <title>DigiGram - Free Agency Template</title>
+  <link rel="icon" type="image/png" href="../assets/img/logo32.png">
+
+  <link rel="shortcut icon" type="image/png" href="../assets/img/logo32.svg">
+  
+  <title>NeuVue - AV Solutions</title>
 
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
 
@@ -29,36 +33,169 @@
   <div class="back-to-top"></div>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-      <div class="container">
-        <a href="index.html" class="navbar-brand"> <img src="../assets/img/neuvue logo.png" alt="Logo"></a>
-
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-float py-3">
+      <div class="container position-relative">
+        <!-- Logo on far left -->
+        <a href="index.html" class="navbar-brand py-2 me-0">
+          <img src="../assets/logofull.png" alt="logo" style="max-height: 50px;">
+        </a>
+        
+        <button class="navbar-toggler border-0" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
+    
+        <!-- Centered navigation -->
         <div class="navbar-collapse collapse" id="navbarContent">
-          <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
-            <li class="nav-item">
+          <ul class="navbar-nav mx-auto mobile-nav-items">
+            <li class="nav-item active px-2">
               <a href="index.html" class="nav-link">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
+            <li class="nav-item px-2">
+              <a href="about.html" class="nav-link">About Us</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item px-2">
               <a href="services.html" class="nav-link">Services</a>
             </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
+            <li class="nav-item px-2">
+              <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+            <!-- Mobile Quote Button (shows only in mobile menu) -->
+            <li class="nav-item mobile-quote-btn px-2">
+              <a href="/digigram/html/contact.html" class="btn btn-outline rounded-pill px-4 w-100">Get a Quote</a>
             </li>
           </ul>
-
-          <div class="ml-auto">
-            <a href="#" class="btn btn-outline rounded-pill">Get a Quote</a>
-          </div>
+        </div>
+    
+        <!-- Desktop Quote Button (shows only on desktop) -->
+        <div class="navbar-nav ms-auto flex-row desktop-quote-btn">
+          <a href="/digigram/html/contact.html" class="btn btn-outline rounded-pill px-4">Get a Quote</a>
         </div>
       </div>
     </nav>
+    
+    <style>
+    /* Custom CSS for navbar positioning */
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .navbar-brand {
+      flex: 0 0 auto;
+    }
+    
+    #navbarContent {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+    }
+    
+    .navbar-nav.mx-auto {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    
+    .mobile-quote-btn {
+      display: none;
+    }
+    
+    /* Fullscreen mobile menu styles */
+    @media (max-width: 991px) {
+      .navbar {
+        padding: 1rem;
+      }
+    
+      .navbar-brand {
+        position: relative;
+        z-index: 1051; /* Above the overlay */
+      }
+    
+      .navbar-toggler {
+        position: relative;
+        z-index: 1051; /* Above the overlay */
+      }
+    
+      #navbarContent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        z-index: 1050;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: none;
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+    
+      #navbarContent.collapse:not(.show) {
+        display: none;
+      }
+    
+      .mobile-nav-items {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+      }
+    
+      .navbar-nav.mx-auto .nav-item {
+        padding: 1rem 0;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.5s forwards;
+      }
+    
+      .navbar-nav.mx-auto .nav-item:nth-child(1) { animation-delay: 0.1s; }
+      .navbar-nav.mx-auto .nav-item:nth-child(2) { animation-delay: 0.2s; }
+      .navbar-nav.mx-auto .nav-item:nth-child(3) { animation-delay: 0.3s; }
+      .navbar-nav.mx-auto .nav-item:nth-child(4) { animation-delay: 0.4s; }
+      .navbar-nav.mx-auto .nav-item:nth-child(5) { animation-delay: 0.5s; }
+    
+      .nav-link {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+      }
+    
+      .mobile-quote-btn {
+        display: block;
+        margin-top: 2rem;
+      }
+    
+      .desktop-quote-btn {
+        display: none;
+      }
+    
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+    
+    /* Animation for navbar items */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    </style>
 
      <section class="service">
        <div class="content">
@@ -170,55 +307,7 @@
 </div>
 
 
-  <main>
-    <div class="page-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 py-3">
-            <h2 class="title-section">We're <span class="marked">ready to</span> Serve you with best</h2>
-            <div class="divider"></div>
-            <p class="mb-5">We provide marketing services to startups & small business to looking for partner for their digital media, design & dev lead generation & communication.</p>
-            <a href="#" class="btn btn-primary">More Details</a>
-            <a href="#" class="btn btn-outline ml-2">See pricing</a>
-          </div>
-          <div class="col-lg-6 py-3">
-            <div class="img-place text-center">
-              <img src="../assets/img/bg_image_3.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
-  
-    <div class="page-section">
-      <div class="container">
-        <div class="text-center">
-          <div class="subhead">Why Choose Us</div>
-          <h2 class="title-section">Your <span class="marked">Comfort</span> is Our Priority</h2>
-          <div class="divider mx-auto"></div>
-        </div>
-  
-        <div class="row mt-5 text-center">
-          <div class="col-lg-4 py-3">
-            <div class="display-3"><span class="mai-shapes"></span></div>
-            <h5>High Performance</h5>
-            <p>Experience unmatched efficiency and reliability with our high-performance solutions designed for success.
-            </p>
-          </div>
-          <div class="col-lg-4 py-3">
-            <div class="display-3"><span class="mai-shapes"></span></div>
-            <h5>Friendly Prices</h5>
-            <p>Enjoy top-quality services and products tailored to fit your budget without compromising excellence.</p>
-          </div>
-          <div class="col-lg-4 py-3">
-            <div class="display-3"><span class="mai-shapes"></span></div>
-            <h5>No time-confusing</h5>
-            <p>Get fast, efficient solutions that save you time and eliminate unnecessary delays.</p>
-          </div>
-        </div>
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
-  </main>
+
 
   <footer class="page-footer">
     <div class="container">
@@ -227,8 +316,8 @@
           <img src="../assets/img/footer logo.png" alt="Logo">
           <p>Transforming Spaces Through Advanced Audio-Visual Solutions.</p>
 
-          <p><a href="#" >digigram@mail.com</a></p>
-          <p><a href="#">+00 1122 3344 5566</a></p>
+          <p><a href="#" >nvavsol@gmail.com</a></p>
+          <p><a href="#">+91 9980 857 666</a></p>
         </div>
         <div class="col-lg-3 py-3">
           <h5>Quick Links</h5>

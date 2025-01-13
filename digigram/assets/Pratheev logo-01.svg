@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .39em;
+      }
+
+      .cls-2 {
+        font-family: MyriadConceptRoman-Light, 'Myriad Variable Concept';
+        font-size: 22px;
+        font-variation-settings: 'wght' 300, 'wdth' 100;
+        font-weight: 300;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #00aeef;
+      }
+
+      .cls-6 {
+        font-family: Pasajero, Pasajero;
+        font-size: 77.08px;
+      }
+
+      .cls-7 {
+        letter-spacing: .33em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: .38em;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-3" d="m245.87,391.67h-87.81c-3.57,0-6.46,2.89-6.46,6.46v88.31c0,4.08,3.73,7.14,7.73,6.33,21.67-4.36,82.15-22.81,92.93-93.74.59-3.88-2.48-7.35-6.4-7.35Z"/>
+    <path class="cls-3" d="m45.69,379.19l87.81.11c3.57,0,6.46-2.88,6.46-6.45l.11-88.31c0-4.08-3.72-7.14-7.72-6.34-21.68,4.34-82.17,22.7-93.04,93.63-.59,3.88,2.47,7.36,6.39,7.36Z"/>
+    <path class="cls-3" d="m45.75,391.67h87.81c3.57,0,6.46,2.89,6.46,6.46v88.31c0,4.08-3.73,7.14-7.73,6.33-21.67-4.36-82.15-22.81-92.93-93.74-.59-3.88,2.48-7.35,6.4-7.35Z"/>
+    <path class="cls-4" d="m158.08,278.02h87.81c3.57,0,6.46,2.89,6.46,6.46v88.31c0,4.08-3.73,7.14-7.73,6.33-21.67-4.36-82.15-22.81-92.93-93.74-.59-3.88,2.48-7.35,6.4-7.35Z"/>
+  </g>
+  <text class="cls-6" transform="translate(268.54 383.66)"><tspan class="cls-3" x="0" y="0">N</tspan><tspan class="cls-5" x="55.03" y="0">E</tspan><tspan class="cls-3" x="95.79" y="0">UVU</tspan><tspan class="cls-4" x="245.33" y="0">E</tspan></text>
+  <text class="cls-2" transform="translate(272.38 422.74) scale(1.38 1)"><tspan class="cls-7" x="0" y="0">A</tspan><tspan class="cls-8" x="20.17" y="0">V </tspan><tspan class="cls-1" x="53" y="0">S</tspan><tspan class="cls-8" x="71.72" y="0">olutions</tspan></text>
+</svg>
