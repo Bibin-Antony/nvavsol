@@ -52,7 +52,6 @@ body {
     padding: 40px;
     margin: 10px;
 }
-
 /* Text Container */
 .text-container {
     flex: 1;
@@ -233,11 +232,14 @@ a{
     }
     .about-section {
         margin-bottom: 10px;
-       
-          /* Image first, text second */
+        display: flex;
+        flex-direction: column-reverse;/* Image first, text second */
         padding: 15px;
     }
-
+    .about-section.textfirst{
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .about-section .text-container,
     .about-section .image-container {
         width: 100%;
@@ -284,5 +286,19 @@ a{
     .desktop-quote-btn {
         display: none; /* Hide desktop button on mobile */
     }
+
+    .about-section.textfirst {
+        display: flex;
+        flex-direction: column-reverse; /* Default for desktop, text and image side by side */
+        flex-wrap: wrap;
+      }
+      
+      .text-container {
+        order: 1; /* This will ensure the text comes first */
+      }
+      
+      .image-container {
+        order: 2; /* The image will come after the text */
+      }
 }
 
