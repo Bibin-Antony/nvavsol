@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
 .about {
     position: relative;
     height: 100vh; /* Full screen height */
@@ -43,7 +52,6 @@
     padding: 40px;
     margin: 10px;
 }
-
 /* Text Container */
 .text-container {
     flex: 1;
@@ -148,6 +156,7 @@ a{
 /* For tablets and smaller screens */
 @media (max-width: 768px) {
     .about {
+        margin-top: 100px;
         height: auto; /* Adjust height to fit content */
         padding: 10px;
     }
@@ -215,48 +224,53 @@ a{
     }
 }
 
-/* For mobile screens */
+
 @media (max-width: 480px) {
-    .about {
-        padding: 5px;
+    /* About section adjustments */
+    .about{
+        margin-top: 100px;
     }
-
-    .content h1 {
-        font-size: 28px; /* Smaller font size for mobile */
-    }
-
-    .content p {
-        font-size: 14px;
-        padding: 10px;
-    }
-
     .about-section {
-        flex-direction: column-reverse; /* Reverse order: image first, then text */
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column-reverse;/* Image first, text second */
         padding: 15px;
     }
-
-    .text-container h1 {
-        font-size: 24px;
+    .about-section.textfirst{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about-section .text-container,
+    .about-section .image-container {
+        width: 100%;
     }
 
+    .text-container h1,
     .text-container p {
-        font-size: 14px;
+        font-size: 16px;  /* Adjust font size for mobile */
     }
 
     .image-container img {
-        width: 100%;
+        width: 100%;   /* Ensure images are responsive */
         height: auto;
-        border-radius: 8px;
     }
 
+    /* Button adjustments */
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* General layout adjustments */
     .choose-us {
         margin: 10px;
-        padding: 15px;
+        padding: 10px;
     }
 
     .choose {
-        flex-direction: column-reverse; /* Reverse order for choose section: image first, then text */
+        flex-direction: column; /* Stack features on top of each other */
         align-items: center;
+        margin-bottom: 10px;
     }
 
     .feature-text {
@@ -264,11 +278,27 @@ a{
         text-align: center;
     }
 
-    .btn {
-        font-size: 14px;
-        padding: 8px 16px;
+    .mobile-quote-btn {
+        display: block; /* Show mobile quote button */
+        margin-top: 20px;
     }
+
+    .desktop-quote-btn {
+        display: none; /* Hide desktop button on mobile */
+    }
+
+    .about-section.textfirst {
+        display: flex;
+        flex-direction: column-reverse; /* Default for desktop, text and image side by side */
+        flex-wrap: wrap;
+      }
+      
+      .text-container {
+        order: 1; /* This will ensure the text comes first */
+      }
+      
+      .image-container {
+        order: 2; /* The image will come after the text */
+      }
 }
-
-
 
